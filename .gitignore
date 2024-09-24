@@ -4,13 +4,11 @@
 .Ruserdata
 .xlsx
 .DS_Store
-
 # R Builds
 *.tar.gz
-
 packrat/lib*/
 packrat/src
 cspdna.Rcheck
-
 local
 svgs
+csp_dna_dit werkt bij mij copy.R
