@@ -175,10 +175,12 @@ prepare_data <- function(data) {
                        "Zorg_zelf", "Destructief", "Suicidaliteit",
                        "Activiteiten", "Onrustig", "Bijzondere_ervaringen",
                        "Verplichtingen", "Negatief_contact",
-                       "Lichamelijke_klachten", "Plezierig", "Onplezierig")
+                       "Lichamelijke_klachten", "Plezierig", "Onplezierig",
+                       "Slapen")
   
   # If dataset has many missings on particular items (>50%), then stop
-  for(var in circle_vars_nms) {
+  # Slapen has forced choice text (??) 
+  for(var in circle_vars_nms[circle_vars_nms != "Slapen"]) {
     
     if( sum( !is.nan( data[ , var] ) ) == 0  ) {
       return(
